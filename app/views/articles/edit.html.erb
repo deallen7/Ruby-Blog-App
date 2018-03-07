@@ -5,41 +5,33 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-	<div class="grid">
-		<div class="wrapper">
-			<div class="box box1"></div>
-			<div class="box box2"></div>
-			<div class="box box3"></div>
-			<div class="box box4"></div>
-		</div>
-		<div class="content">
-			<% if @article.errors.any? %>
-				<h3>Errors:</h3>
-				<ul>
-				<% @article.errors.full_messages.each do |msg| %>
-					<li><%= msg %></li>
-					<% end %>
-				</ul>
-			<% end %>
+	<div class="content">
+		<% if @article.errors.any? %>
+			<h3>Errors:</h3>
+			<ul>
+			<% @article.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+				<% end %>
+			</ul>
+		<% end %>
 
-			<%= form_for @article do |f| %>
-				<p>
-					<%= f.label :title %></br>
-					<%= f.text_field :title %>
-				</p>
+		<%= form_for @article do |f| %>
+			<p>
+				<%= f.label :title %></br>
+				<%= f.text_field :title %>
+			</p>
 
-				<p>
-					<%= f.label :description %></br>
-					<%= f.text_area :description %>
-				</p>
+			<p>
+				<%= f.label :description %></br>
+				<%= f.text_area :description %>
+			</p>
 
-				<p>
-					<%= f.submit %>
-				</p>
+			<p>
+				<%= f.submit %>
+			</p>
 
-			<% end %>
-			<%= link_to 'back', articles_path %>
-		</div>
+		<% end %>
+		<%= link_to 'back', articles_path %>
 	</div>
 </body>
 </html>

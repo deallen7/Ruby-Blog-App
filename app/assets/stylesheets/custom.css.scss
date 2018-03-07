@@ -1,4 +1,4 @@
-$navbar-default-bg: #ecf0f1;
+$navbar-default-bg: white;
 
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
@@ -15,9 +15,33 @@ $navbar-default-bg: #ecf0f1;
 
 #logo:hover {
 	text-decoration: none;
-	color: #e67e22;
+	color: #313F4E;
 }
 
 .center {
 	text-align: center;
+}
+
+.jumbotron {
+	background-image: asset-url('alpha-blog-banner.png')
+}
+
+.jumbotron h2 {
+	font-weight: bold;
+}
+
+.btn-1 {
+	background-color: #C95F4C;
+	border: none;
+}
+
+.btn-1:hover {
+	background-color: #313F4E;
+	color: #C95F4C;
+}
+
+.footer {
+	background-color: white;
+	text-align: center;
+	margin-top: 400px;
 }

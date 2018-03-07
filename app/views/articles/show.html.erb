@@ -5,19 +5,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
-	<div class="grid">
-		<div class="wrapper">
-			<div class="box box1"></div>
-			<div class="box box2"></div>
-			<div class="box box3"></div>
-			<div class="box box4"></div>
-		</div>
-		<div class="content">
-			<h2><%= @article.title %></h2>
-			<p><%= @article.description %></p>
-			<%= link_to 'edit', edit_article_path(@article) %>
-			<%= link_to 'back', articles_path %>
-		</div>
+	<div class="content">
+		<h2><%= @article.title %></h2>
+		<p><%= @article.description %></p>
+		<%= link_to 'edit', edit_article_path(@article) %>
+		<%= link_to 'back', articles_path %>
 	</div>
 </body>
 </html>

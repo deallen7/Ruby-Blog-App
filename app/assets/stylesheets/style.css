@@ -12,7 +12,6 @@
 .content {
 	grid-area: content;
 	padding: 20px;
-	background-color: #ecf0f1;
 }
 
 .wrapper {
