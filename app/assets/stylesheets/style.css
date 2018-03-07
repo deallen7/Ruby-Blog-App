@@ -6,7 +6,7 @@
 	display: grid;
 	grid-template-areas: "box1 content" "box2 content" "box3 content" "box4 content";
 	grid-template-rows: 100px 100px 100px 500px;
-	grid-template-columns: 100px 1250px;
+	grid-template-columns: 100px 1295px;
 }
 
 .content {
