@@ -8,12 +8,13 @@
 <body>
 	<div class="grid">
 		<div class="wrapper">
-			<div class="box box1"></div>
+			<div class="box box1"><%= link_to "New", new_article_path %></div>
 			<div class="box box2"></div>
 			<div class="box box3"></div>
 			<div class="box box4"></div>
 		</div>
 		<div class="content">
+			
 			<table>
 				<tr>
 					<th>Title</th>
@@ -23,6 +24,8 @@
 				<tr>
 					<td><%= article.title %></td>
 					<td><%= article.description %></td>
+					<td><%= link_to 'Edit', edit_article_path(article) %></td>
+					<td><%= link_to 'Show', article_path(article) %></td>
 				</tr>
 				<% end %>
 			</table>
