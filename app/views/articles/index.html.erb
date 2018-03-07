@@ -1,4 +1,5 @@
-<!DOCTYPE <html>
+<!DOCTYPE html>
+<html>
 <head>
 	<title>All Articles</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -18,11 +19,10 @@
 					<th>Title</th>
 					<th>Description</th>
 				</tr>
-
 				<% @articles.each do |article| %>
 				<tr>
-					<td><%= @article.title %></td>
-					<td><%= @article.description %></td>
+					<td><%= article.title %></td>
+					<td><%= article.description %></td>
 				</tr>
 				<% end %>
 			</table>
