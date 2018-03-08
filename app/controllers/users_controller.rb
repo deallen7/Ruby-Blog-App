@@ -50,6 +50,5 @@ class UsersController < ApplicationController
 			flash[:danger] = "You can only edit your own account"
 			redirect_to root_path
 		end
-	end 
-
+	end
 end
