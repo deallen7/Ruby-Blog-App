@@ -23,10 +23,12 @@
 		<hr>
 		<%= simple_format(@article.description) %>
 		<div class="article-actions">
-			<%= link_to 'edit', edit_article_path(@article), class: "btn btn-xs btn-primary" %>
-			<%= link_to "delete", article_path(@article), method: :delete,
-			 				data: { confirm: "are you sure?" }, 
-			 				class: "btn btn-xs btn-danger" %>
+			<% if logged_in? && current_user = @article.user %>
+				<%= link_to 'edit', edit_article_path(@article), class: "btn btn-xs btn-primary" %>
+				<%= link_to "delete", article_path(@article), method: :delete,
+				 				data: { confirm: "are you sure?" }, 
+				 				class: "btn btn-xs btn-danger" %>
+			 <% end %>
 			<%= link_to 'view all', articles_path, class: "btn btn-xs btn-success" %>
 		</div>
 	</div>
