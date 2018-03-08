@@ -64,12 +64,15 @@ $navbar-default-bg: white;
 .footer {
 	background-color: white;
 	text-align: center;
-	position:absolute;
-	left:0;
-	right:0;
+	position: fixed;
+	left: 0;
+	right: 0;
 	bottom: 0;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 20px;
-	margin-top: 50px;
+}
+
+.article-meta-details {
+	border-top: 1px solid #eaeaea;
+	margin-top: 15px;
 }
