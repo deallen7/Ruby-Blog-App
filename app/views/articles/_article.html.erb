@@ -8,10 +8,12 @@
 					<div class="article-body">
 						<%= truncate(article.description, length: 100) %> </br>
 						<div class="article-meta-details">
-							<small>Created by: <%= article.user.username %>, <%= time_ago_in_words(article.created_at) %> ago, last updated: <% time_ago_in_words(article.updated_at) %> ago </small>
+							<small>Created by: <%= article.user.username if article.user%>, 
+								<%= time_ago_in_words(article.created_at) %> ago, 
+								last updated: <% time_ago_in_words(article.updated_at) %> ago </small>
 						</div>
 					</div>
-						<% if current_user == article.user %>
+						<% if logged_in? && current_user == article.user %>
 							<div class="article-actions">
 								<%= link_to 'edit', edit_article_path(article), class: "btn btn-xs btn-primary" %>
 								<%= link_to "delete", article_path(article), method: :delete,
