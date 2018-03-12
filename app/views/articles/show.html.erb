@@ -1,7 +1,6 @@
 <!DOCTYPE <html>
 <head>
 	<title>Create Article</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
@@ -22,6 +21,9 @@
 		<h4 class="center description"><strong>Description:</strong></h4>
 		<hr>
 		<%= simple_format(@article.description) %>
+		<% if @article.categories.any? %>
+			<p>Categories: <%= render @article.categories %></p>
+		<% end %>
 		<div class="article-actions">
 			<% if logged_in? && (current_user = @article.user || current_user.admin?) %>
 				<%= link_to 'edit', edit_article_path(@article), class: "btn btn-xs btn-primary" %>
